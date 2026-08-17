@@ -2,6 +2,7 @@ pandas==2.3.3
 requests==2.32.3
 pandas-ta==0.4.71b0
 python-dotenv==0.21.0
+mistralai==0.4.2
 tweepy==4.16.0
 streamlit==1.37.1
 matplotlib==3.9.2
