@@ -43,7 +43,7 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-1. Create a `.env` file at the root with your API keys:
+Create a `.env` file at the root with your API keys:
 
 ```
 TWITTER_BEARER_TOKEN=...
