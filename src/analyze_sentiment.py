@@ -15,15 +15,12 @@ def analyze_sentiment(text):
     Analyse le sentiment de ce tweet sur une crypto-monnaie.
     Réponds UNIQUEMENT par l'un des trois mots suivants : 'positif', 'négatif', 'neutre'.
     Ne donne aucune explication, aucun commentaire, ni aucun autre mot.
-    Tweet : {text}
     """
     response = client.chat(
         model="mistral-tiny",
         messages=[{"role": "user", "content": prompt}]
     )
-    # On récupère la réponse et on extrait le premier mot (au cas où)
     sentiment = response.choices[0].message.content.strip().lower()
-    # On standardise la réponse pour s'assurer qu'elle est valide
     if "positif" in sentiment:
         return "positive"
     elif "négatif" in sentiment:

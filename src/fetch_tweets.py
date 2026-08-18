@@ -45,7 +45,7 @@ def fetch_tweets(query, count=10):
         return pd.DataFrame()  # Return empty DataFrame if there's an error
 
 # Fetch tweets about Bitcoin
-tweets_df = fetch_tweets("Bitcoin", count=10)
+tweets_df = fetch_tweets("Bitcoin", count=100)
 
 # Save to CSV
 if not tweets_df.empty:

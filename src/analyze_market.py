@@ -21,8 +21,8 @@ min_score = tweets['sentiment_score'].min()
 max_score = tweets['sentiment_score'].max()
 tweets['sentiment_score'] = (tweets['sentiment_score'] - min_score) / (max_score - min_score)
 
-# Regrouper par heure (correction : utiliser 'h' au lieu de 'H')
-tweets['hour'] = tweets['date'].dt.floor('h')  # Utiliser 'h' au lieu de 'H'
+# Regrouper par heure 
+tweets['hour'] = tweets['date'].dt.floor('h')  
 daily_sentiment = tweets.groupby('hour')['sentiment_score'].mean().reset_index()
 daily_sentiment = daily_sentiment.rename(columns={'hour': 'date'})
 daily_sentiment.set_index('date', inplace=True)
