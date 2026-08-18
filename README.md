@@ -34,23 +34,12 @@ An interactive dashboard (Streamlit) lets you visualize the analyzed tweets and 
 
 ## Installation
 
-1. Clone the repo:
 
 ```bash
 git clone https://github.com/emmie-vinet/cryptomood.git
 cd cryptomood
-```
-
-1. Create a virtual environment (recommended):
-
-```bash
 python -m venv venv
 venv\Scripts\activate
-```
-
-1. Install dependencies:
-
-```bash
 pip install -r requirements.txt
 ```
 
